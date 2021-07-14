@@ -12,9 +12,9 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.get('/flipcoin', async(req, res) => {
     const randomNum = Math.floor(Math.random() * 2)
     if (randomNum == 0) {
-        res.json("heads")
+        res.send("heads")
     } else {
-        res.json('tails')
+        res.send('tails')
     }
 })
 app.get('/restaurants', async(req, res) => {
