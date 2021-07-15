@@ -3,6 +3,9 @@ const { Restaurant, Menu, Item } = require('./models/index') //Q: WHY import the
 
 //Q: Why do you think each object inside of the arrays are structured the way that they are?
 //Q: What do you think will happen when we 'seed' this file?
+
+
+
 const seedRestaurant = [{
         name: 'AppleBees',
         location: 'Texas',
@@ -17,37 +20,51 @@ const seedRestaurant = [{
         name: 'Spice Grill',
         location: 'Houston',
         cuisine: 'Indian'
-    }
+    },
+    {
+        name: 'burgetking',
+        location: 'Dallas',
+        cuisine: 'Hotpot'
+    },
+    {
+        name: 'MCDS',
+        location: 'Dallas',
+        cuisine: 'Hotpot'
+    },
 ]
-
 const seedMenu = [{
-        title: 'Breakfast'
+        title: 'Breakfast',
+        RestaurantId: 1,
     },
     {
-        title: 'Lunch'
+        title: 'Lunch',
+        RestaurantId: 2,
     },
     {
-        title: 'Dinner'
+        title: 'Dinner',
+        RestaurantId: 3,
     },
 ]
-
 const seedItem = [{
         name: 'bhindi masala',
         image: 'someimage.jpg',
         price: 9.50,
-        vegetarian: true
+        vegetarian: true,
+        MenuId: 3,
     },
     {
         name: 'egusi soup',
         image: 'someimage.jpg',
         price: 10.50,
-        vegetarian: false
+        vegetarian: false,
+        MenuId: 2,
     },
     {
         name: 'hamburger',
         image: 'someimage.jpg',
         price: 6.50,
-        vegetarian: false
+        vegetarian: false,
+        MenuId: 1,
     }
 ]
 
