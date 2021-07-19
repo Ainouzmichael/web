@@ -1,0 +1,22 @@
+<section>
+	<h2>There are {{restaurants.length}} restaurants</h2>
+    <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    See All Restaurants
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">
+        {{#each restaurants}} 
+		<article >
+            <li><hr class="dropdown-divider"></li>
+            
+			<a href="/restaurants/{{id}}">{{name}}</a>
+            
+		</article>
+	{{/each}}</a>
+    </li>
+    
+  </ul>
+</div>
+	
+</section>
